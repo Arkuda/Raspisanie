@@ -1,11 +1,11 @@
 
 var DayOfWeek = 0;
 var nowGroup = localStorage.getItem("nowGroup");
-var groupsJSON;
 var isOnline;
 var currentBuild = 1;
 
 var isAnglDate = false;
+var groupsJSON;
 
 var namesWeek = ["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","ВЫХОДНОЙ НАХ"];
 
@@ -16,12 +16,31 @@ function init()
         setAutomDayOfWeek();
         getGroups(function(){
             loadAndSetRaspisane(nowGroup);
+            getNews();
+
         });
     });
 }
 
-
-
+function getNews()
+{
+    if(isOnline)
+    {
+        $("#news").load("https://dl.dropboxusercontent.com/u/61847240/raspisanie/news_"+nowGroup+".txt", function(response, status, xhr) {
+            // error handling
+            if(status == "error") {
+                $("#content").html("An error occured: " + xhr.status + " " + xhr.statusText);
+            }else
+            {
+                localStorage.setItem("news_json",response);
+            }
+        });
+    }
+    else
+    {
+        $("#news").append(localStorage.getItem("news_json"));
+    }
+}
 function checkUpdate(actualBuild, urlToDownload)
 {
     console.log(">checkUpdate:" + " curr-" + currentBuild +";actual-" +actualBuild);
@@ -32,8 +51,6 @@ function checkUpdate(actualBuild, urlToDownload)
 
     }
 }
-
-
 function loadAndSetRaspisane(_groupName)
 {
     if(isOnline){
@@ -101,7 +118,9 @@ function loadAndSetRaspisane(_groupName)
             $("#rasp"+i+"p").text(lol[i].split(';')[0]);
             $("#rasp"+i+"c").text(lol[i].split(';')[1]);
         }
+
     }
+//callback();
 }
 function checkIsOnline(callback)
 {
@@ -130,6 +149,10 @@ function getGroups(callback)
             for(var i = 0; i <= _group.size-1; i++)
             {
                 addGroup(_group.groups.split(',')[i]);
+                if(nowGroup == null)
+                {
+                    nowGroup = _group.groups.split(',')[i];
+                }
             }
             callback();
         }).fail(function(ex) {
