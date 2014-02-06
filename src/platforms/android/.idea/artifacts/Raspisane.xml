@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="apk" name="Raspisane">
+  <artifact type="apk" build-on-make="true" name="Raspisane">
     <output-path>$PROJECT_DIR$/out/artifacts/Raspisane</output-path>
     <properties id="android-properties">
       <options>
@@ -9,6 +9,7 @@
             <option value="file://%MODULE_SDK_HOME%/tools/proguard/proguard-android.txt" />
           </list>
         </option>
+        <option name="signingMode" value="DEBUG" />
       </options>
     </properties>
     <root id="archive" name="Raspisane.apk">

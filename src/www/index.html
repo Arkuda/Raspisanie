@@ -8,6 +8,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<script src="phonegap.js"></script>
+<script src="cardova.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/app.js"></script>
@@ -30,8 +32,7 @@
 <div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="set"><span class="glyphicon glyphicon-cog"></span> <span class="caret"></span>
     </button>
-    <ul class="dropdown-menu" role="menu" id="groupsselct">
-
+        <ul class="dropdown-menu" role="menu" id="groupsselct">
     </ul>
 </div>
 
@@ -63,7 +64,26 @@
     </tr>
 
 </table>
-<script>init();</script>
 </div>
+
+<div class="modal fade" id="modalUpd">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Доступно обновление</h4>
+            </div>
+            <div class="modal-body">
+                <p>Доступна новая версия, скачать ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Не сейчас</button>
+                <a type="button" class="btn btn-primary" rel="external" id="downldUpd">Скачать</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>init();</script>
 </body>
 </html>

@@ -3,7 +3,9 @@ var DayOfWeek = 0;
 var nowGroup = localStorage.getItem("nowGroup");
 var groupsJSON;
 var isOnline;
+var currentBuild = 1;
 
+var isAnglDate = false;
 
 var namesWeek = ["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","ВЫХОДНОЙ НАХ"];
 
@@ -16,6 +18,19 @@ function init()
             loadAndSetRaspisane(nowGroup);
         });
     });
+}
+
+
+
+function checkUpdate(actualBuild, urlToDownload)
+{
+    console.log(">checkUpdate:" + " curr-" + currentBuild +";actual-" +actualBuild);
+    if(actualBuild > currentBuild)
+    {
+        $("#modalUpd").modal();
+        $("#downldUpd").attr("href",urlToDownload).attr("onclick","window.open("+urlToDownload+",'_system')");
+
+    }
 }
 
 
@@ -92,8 +107,10 @@ function checkIsOnline(callback)
 {
     $.get("http://dl.dropboxusercontent.com/u/61847240/raspisanie/avalible.json",function(data)
     {
+        var xml = JSON.parse(data);
         console.log("ISONLINE = TRUE;");
         isOnline = true;
+        checkUpdate(xml.buldversion,xml.url2download);
         callback();
     }).fail(function(ex) {
             console.log("ISONLINE = FALSE;");
@@ -148,8 +165,15 @@ function setAutomDayOfWeek()
 {
     var d = new Date();
     var n = d.getDay();
-    if(n ==6 || n ==0 ) selectDayOfWeek(n-1);
-    else selectDayOfWeek(0);
+   if(isAnglDate){
+        if(!(n ==6) || !(n ==0) ) selectDayOfWeek(n-1);
+        else selectDayOfWeek(0);
+    }else
+   {
+       if(!(n ==5) || !(n == 6) ) selectDayOfWeek(n-1);
+       else selectDayOfWeek(0);
+   }
+
 
 }
 function selectDayOfWeek(i)
