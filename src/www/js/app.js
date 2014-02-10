@@ -12,16 +12,30 @@ var namesWeek = ["Понедельник","Вторник","Среда","Чет�
 
 function init()
 {
+    showSplashScreen();
     checkIsOnline(function(){
         setAutomDayOfWeek();
         getGroups(function(){
-            loadAndSetRaspisane(nowGroup);
-            getNews();
+            loadAndSetRaspisane(nowGroup,function(){
+                getNews();
+                hideSplashScreen();
+            });
 
         });
     });
 }
 
+
+function showSplashScreen()
+{
+    $("#splashscreen").show();
+    $("#content").hide();
+}
+function hideSplashScreen()
+{
+    $("#splashscreen").hide();
+    $("#content").show()    ;
+}
 function getNews()
 {
     if(isOnline)
@@ -39,6 +53,7 @@ function getNews()
     else
     {
         $("#news").append(localStorage.getItem("news_json"));
+
     }
 }
 function checkUpdate(actualBuild, urlToDownload)
@@ -51,7 +66,7 @@ function checkUpdate(actualBuild, urlToDownload)
 
     }
 }
-function loadAndSetRaspisane(_groupName)
+function loadAndSetRaspisane(_groupName, callback)
 {
     if(isOnline){
         $.get("http://dl.dropboxusercontent.com/u/61847240/raspisanie/"+_groupName+".json",function(data)
@@ -86,6 +101,7 @@ function loadAndSetRaspisane(_groupName)
                 $("#rasp"+i+"p").text(lol[i].split(';')[0]);
                 $("#rasp"+i+"c").text(lol[i].split(';')[1]);
             }
+        callback();
         }).fail(function(ex) {
                 console.error("error of loading "+_groupName+".json");
             });
@@ -118,7 +134,7 @@ function loadAndSetRaspisane(_groupName)
             $("#rasp"+i+"p").text(lol[i].split(';')[0]);
             $("#rasp"+i+"c").text(lol[i].split(';')[1]);
         }
-
+        callback();
     }
 //callback();
 }
