@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.arkuda63.raspisanie" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.arkuda63.raspisanie" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Raspisanie</name>
     <description>
         App for looking raspisanie. RUSSIAN STYLE.
     </description>
     <author email="reyzor2142@gmail.com" href="http://phonegap.com">
-        PhoneGap Team
+        ArkudA
     </author>
     <feature name="Raspisanie" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
-    <preference name="webviewbounce" value="false" />
+    <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="false" />
-    <preference name="stay-in-webview" value="false" />
+    <preference name="stay-in-webview" value="true" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
@@ -47,6 +47,5 @@
     <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
-    <access origin="https://dl.dropboxusercontent.com/u/61847240/raspisanie/*" subdomains="true" />
-    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+    <access origin="*" subdomains="true" />
 </widget>

@@ -1,1 +1,1 @@
- : F:\Games\MineCraft\GitForks\Raspisanie\src\platforms\android\CordovaLib\bin\AndroidManifest.xml \
+ : F:\GitForks\Raspisanie\src\platforms\android\CordovaLib\bin\AndroidManifest.xml \

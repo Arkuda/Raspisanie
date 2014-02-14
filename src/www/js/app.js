@@ -12,13 +12,13 @@ var namesWeek = ["Понедельник","Вторник","Среда","Чет�
 
 function init()
 {
-    showSplashScreen();
+   // showSplashScreen();
     checkIsOnline(function(){
         setAutomDayOfWeek();
         getGroups(function(){
             loadAndSetRaspisane(nowGroup,function(){
                 getNews();
-                hideSplashScreen();
+      //          hideSplashScreen();
             });
 
         });
