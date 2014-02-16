@@ -7,9 +7,6 @@ var currentBuild = 1;
 var isAnglDate = false;
 var groupsJSON;
 
-var namesWeek = ["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","ВЫХОДНОЙ НАХ"];
-
-
 function init()
 {
    // showSplashScreen();
