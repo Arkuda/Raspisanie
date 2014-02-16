@@ -20,12 +20,11 @@ init()->
 
 getNews ->
   if isOnline
-    $ "#news".load(dropboxUrl +"/news_"+nowGroup+".txt", (response, status, xhr)->
+    $ "#news".load dropboxUrl +"/news_"+nowGroup+".txt", (response, status, xhr)->
       if status == "error"
         $ "#content".html "An error occured: " + xhr.status + " " + xhr.statusText
       else
         localStorage.setItem "news_json",response
-    )
   else
     $ "#news".append localStorage.getItem "news_json"
 
@@ -70,3 +69,10 @@ checkIsOnline (callback)->
       console.log "in online = false"
       isOnline = false
       callback
+
+getGroups (callback)->
+  if isOnline
+    $.get dropboxUrl + "avalible.json", (data)->
+      groupsJSON = data
+      localStorage.setItem "groups-json", data
+      _group = JSON.parse localStorage.getItem "group-json"
