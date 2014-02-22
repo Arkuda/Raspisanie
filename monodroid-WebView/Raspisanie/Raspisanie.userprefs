@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Raspisanie\Views\RazorView.cshtml">
+    <Files>
+      <File FileName="Raspisanie\MainActivity.cs" Line="9" Column="1" />
+      <File FileName="Raspisanie\Views\RazorView.cshtml" Line="8" Column="38" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Raspisanie" expanded="True">
+            <Node name="Assets" expanded="True" />
+            <Node name="Views" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
