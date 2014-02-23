@@ -1,4 +1,23 @@
 
+var nowGroup;
+
+
+function selectDayOfWeek(intDay)
+{
+	
+}
+
+function setRaspisaine(intParaArr,stringNameArr)
+{
+	for(var i = 0; i < 6;i++){
+	    $("#rasp" + i + "p").text(intParaArr[i]);
+	    $("#rasp" + i + "c").text(stringNameArr[i]);
+	}
+}
+
+
+
+/*
 var DayOfWeek = 0;
 var nowGroup = localStorage.getItem("nowGroup");
 var isOnline;
@@ -220,4 +239,4 @@ function selectDayOfWeek(i)
     DayOfWeek = i;
     $("#btn1").text(namesWeek[i]);
     loadAndSetRaspisane(nowGroup);
-}
+}*/

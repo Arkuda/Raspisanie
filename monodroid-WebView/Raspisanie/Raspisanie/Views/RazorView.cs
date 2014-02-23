@@ -310,7 +310,7 @@ WriteLiteral(">Скачать</a>\r\n            </div>\r\n        </div><!-- /.
 
 WriteLiteral(" id=\"news\"");
 
-WriteLiteral(">\r\n\r\n</div>\r\n</div>\r\n<script>init();</script>\r\n</body>\r\n</html>");
+WriteLiteral(">\r\n\r\n</div>\r\n</div>\r\n</body>\r\n</html>");
 
 }
 }
