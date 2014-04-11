@@ -4,7 +4,7 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-    <name>Raspisanie</name>
+    <name>Расписание</name>
     <description>
         Raspisanie
     </description>
@@ -13,4 +13,5 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <icon src="res/icons/" />
 </widget>

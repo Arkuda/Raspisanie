@@ -20,11 +20,13 @@ D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\fonts \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\icon.png \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\index.html \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\js \
+D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\res \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\css\bootstrap-theme.css \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\css\bootstrap-theme.css.map \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\css\bootstrap-theme.min.css \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\css\bootstrap.css \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\css\bootstrap.css.map \
+D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\css\bootstrap.min-b.css \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\css\bootstrap.min.css \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\fonts\glyphicons-halflings-regular.eot \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\fonts\glyphicons-halflings-regular.svg \
@@ -34,4 +36,7 @@ D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\js\app.js \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\js\appold.coffee \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\js\bootstrap.js \
 D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\js\jquery.js \
+D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\res\android \
+D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\res\android\icon-72-hdpi.png \
+D:\gitforks\Raspisanie\cordova\platforms\android\assets\www\res\android\icon-96-xhdpi.png \
 D:\gitforks\Raspisanie\cordova\platforms\android\ant-build\AndroidManifest.xml \

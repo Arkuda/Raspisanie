@@ -1,29 +1,30 @@
 
 var DayOfWeek = 0;
-var nowGroup = localStorage.getItem("nowGroup");
+var nowGroup = localStorage.getItem("nowGroup") || "pive31";
 var isOnline;
 var currentBuild = 2;
 
 var isAnglDate = false;
 var groupsJSON;
 
+
 var namesWeek = ["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","ВЫХОДНОЙ НАХ"];
 
 
 function init()
 {
-    //showSplashScreen();
+
     checkIsOnline(function(){
         setAutomDayOfWeek();
         getGroups(function(){
             loadAndSetRaspisane(nowGroup,function(){
                 getNews();
-      //          hideSplashScreen();
             });
 
         });
-   });
+    });
 }
+
 
 
 function showSplashScreen()
