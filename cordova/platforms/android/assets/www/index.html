@@ -15,6 +15,7 @@
 <script src="js/app.js"></script>
 
 
+
 <!--
 <div align="center" id="splashscreen">
     <div class="container">
@@ -30,25 +31,30 @@
 
 <div id="content">
 <div align="center">
+    <nav class="navbar navbar-default" role="navigation">
 
-<div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="btn1">DayOfWeek <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-        <li><a href="#" onclick="selectDayOfWeek(0)">Понедельник</a></li>
-        <li><a href="#" onclick="selectDayOfWeek(1)">Вторник</a></li>
-        <li><a href="#" onclick="selectDayOfWeek(2)">Среда</a></li>
-        <li><a href="#" onclick="selectDayOfWeek(3)">Четверг</a></li>
-        <li><a href="#" onclick="selectDayOfWeek(4)">Пятница</a></li>
-    </ul>
-</div>
+            <div class="container-fluid">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="btn1">DayOfWeek <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" onclick="selectDayOfWeek(0)">Понедельник</a></li>
+                        <li><a href="#" onclick="selectDayOfWeek(1)">Вторник</a></li>
+                        <li><a href="#" onclick="selectDayOfWeek(2)">Среда</a></li>
+                        <li><a href="#" onclick="selectDayOfWeek(3)">Четверг</a></li>
+                        <li><a href="#" onclick="selectDayOfWeek(4)">Пятница</a></li>
+                    </ul>
+                </div>
 
-<div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="set"><span class="glyphicon glyphicon-cog"></span> <span class="caret"></span>
-    </button>
-        <ul class="dropdown-menu" role="menu" id="groupsselct">
-    </ul>
-</div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="set"><span class="glyphicon glyphicon-cog"></span> <span class="caret"></span>
+                    </button>
+                        <ul class="dropdown-menu" role="menu" id="groupsselct">
+                    </ul>
+                </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+
 
 <table class="table table-striped">
     <tr>
@@ -99,7 +105,7 @@
 </div><!-- /.modal -->
 
 
-<div id="news">
+<div id="news" style="padding: 10px 10px 10px 10px">
 
 </div>
 </div>
