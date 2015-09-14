@@ -47,7 +47,7 @@ angular.module('starter.controllers', [])
         }
         $scope.raps = raspisane;
       }).error(function(data) {
-        alert("Rasp not loaded " + data );
+        alert("Сначала выберите группу... если выбрали группу и все равно не работает - обратитесь к администратору.");
         if (positiveWeek()){
           $scope.raps = localStorage.getItem("raspisanie").chet;
         }
