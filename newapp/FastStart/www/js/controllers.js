@@ -26,13 +26,37 @@ angular.module('starter.controllers', [])
       case "sub":   $scope.day = namesWeek[5]; break;
       default : break
     }
+    var typeWeek;
+    if(positiveWeek()){
+      typeWeek = "Четная";
+    }
+    else{
+      typeWeek = "Нечетная";
+    }
+    $scope.typeWeek = typeWeek;
+
     $http.get(url_raspisanie + localStorage.getItem("currentGroup") + ".json")
       .success(function(data) {
-      //  var  raspisane = JSON.parse(data);
-        $scope.raps = data;
+         var  raspisane;
+        localStorage.setItem("raspisanie",data);
+        if (positiveWeek()){
+          raspisane = data.chet[0];
+        }
+        else{
+          raspisane= data.necet[0];
+        }
+        $scope.raps = raspisane;
       }).error(function(data) {
         alert("Rasp not loaded " + data );
+        if (positiveWeek()){
+          $scope.raps = localStorage.getItem("raspisanie").chet;
+        }
+        else{
+          $scope.raps = localStorage.getItem("raspisanie").necet;
+        }
+
       });
+    //$scope.$apply();
   })
   .controller('setCtrl', function($scope,$http ,$stateParams, $timeout) {
     //scope.test = $stateParams.dayID;
@@ -50,6 +74,7 @@ angular.module('starter.controllers', [])
         $scope.groups = groups;
       }).error(function(data) {
         alert("Groups not loaded " + data );
+
       });
   });
 
@@ -57,13 +82,29 @@ angular.module('starter.controllers', [])
 
 
 
-function setGroup(name){
-  localStorage.setItem("currentGroup",name);
-  console.log("select " + name);
-}
+
 var groups = [];
 
 ///urls
 //var url_grups = "http://dl.dropboxusercontent.com/u/61847240/raspisanie/avalible.json";
 var url_grups = "https://raw.githubusercontent.com/Arkuda/Raspisanie/master/avalible.json";
 var url_raspisanie = "https://raw.githubusercontent.com/Arkuda/Raspisanie/master/";
+
+
+
+function positiveWeek(){
+  var today = new Date();
+  var weekno = today.getWeek();
+  if((weekno % 2) == 0){
+    //nechetnayua :C
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+
+Date.prototype.getWeek = function() {
+  var onejan = new Date(this.getFullYear(),0,1);
+  return Math.ceil((((this - onejan) / 86400000) + onejan.getDay()+1)/7);
+}

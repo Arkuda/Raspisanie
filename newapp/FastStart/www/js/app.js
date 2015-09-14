@@ -45,7 +45,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
+    .state('app.adds', {
+      url: '/add',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/add.html'
+        }
+      }
+    })
   .state('app.raspisanie', {
     url: '/raspisanie/:dayID',
     views: {
@@ -56,7 +63,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/raspisanie/'+ getDayOfWeek());
+  if(localStorage.getItem("firstrun") == true || localStorage.getItem("firstrun") == undefined ){
+    $urlRouterProvider.otherwise('/app/set');
+  } else{
+    $urlRouterProvider.otherwise('/app/raspisanie/'+ getDayOfWeek());
+  }
 });
 
 
