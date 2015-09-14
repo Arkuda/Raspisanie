@@ -1,0 +1,14 @@
+<ion-view view-title="Выбор">
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <select name="groups" class="item item-text-wrap" id="goupselct"  >
+            <option  ng-repeat="group in groups" value="{{group}}">{{group}}</option>
+        </select>
+      </label>
+    </div>
+    <button class="button button-full button-positive"  onclick="localStorage.setItem('currentGroup',document.getElementById('goupselct').options[document.getElementById('goupselct').selectedIndex].value); alert('Сохранено')">
+      Сохранить
+    </button>
+  </ion-content>
+</ion-view>

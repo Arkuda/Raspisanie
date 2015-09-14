@@ -8,6 +8,9 @@ var isAnglDate = false;
 var groupsJSON;
 
 
+var dayRasp;
+
+
 var namesWeek = ["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","ВЫХОДНОЙ НАХ"];
 
 
@@ -70,7 +73,7 @@ function checkUpdate(actualBuild, urlToDownload)
 function loadAndSetRaspisane(_groupName, callback)
 {
     if(isOnline){
-        $.get("http://dl.dropboxusercontent.com/u/61847240/raspisanie/"+_groupName+".json",function(data)
+        $.get("https://github.com/Arkuda/Raspisanie/blob/master/"+_groupName+".json",function(data)
         {
             localStorage.setItem("raspisanie-"+_groupName+"-json",data);
             var  raspisane = JSON.parse(data);
@@ -98,10 +101,8 @@ function loadAndSetRaspisane(_groupName, callback)
             if(lol == null){
                 var lol = raspisane.pon;
             }
-            for(var i =0; i < lol.length; i++){
-                $("#rasp"+i+"p").text(lol[i].split(';')[0]);
-                $("#rasp"+i+"c").text(lol[i].split(';')[1]);
-            }
+
+            daysRasp = lol;
         callback();
         }).fail(function(ex) {
                 console.error("error of loading "+_groupName+".json");
@@ -131,17 +132,14 @@ function loadAndSetRaspisane(_groupName, callback)
                 var lol = raspisane.sub;
                 break;
         }
-        for(var i =0; i < lol.length; i++){
-            $("#rasp"+i+"p").text(lol[i].split(';')[0]);
-            $("#rasp"+i+"c").text(lol[i].split(';')[1]);
-        }
+        daysRasp = lol;
         callback();
     }
 //callback();
 }
 function checkIsOnline(callback)
 {
-    $.get("http://dl.dropboxusercontent.com/u/61847240/raspisanie/avalible.json",function(data)
+    $.get("http://raw.githubusercontent.com/Arkuda/Raspisanie/master/avalible.json",function(data)
     {
         var xml = JSON.parse(data);
         console.log("ISONLINE = TRUE;");

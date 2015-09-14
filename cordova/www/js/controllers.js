@@ -1,9 +1,9 @@
 angular.module("raspisanie",[])
     .controller('raspCTRL',function(){
 
-        var days = daysRasp;
+        var day = dayRasp;
 
-        $scope.days = days ;
+        $scope.day = day ;
 
 
     });
