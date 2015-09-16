@@ -1,0 +1,353 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"check",
+				"checkIsOnline"
+			],
+			[
+				"get",
+				"getElementsByTagName"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "www/js/controllers.js",
+			"settings":
+			{
+				"buffer_size": 3709,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/E/github/Raspisanie/cordova/www/js/app.js",
+			"settings":
+			{
+				"buffer_size": 5799,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/templates/set.html",
+			"settings":
+			{
+				"buffer_size": 931,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: alert"
+			],
+			[
+				"package controll",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '5b468e895e861582c8ac080daaae7722' + 'a0787a887fb19723f006ed5b020ffdf6'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/github/Raspisanie/newapp/FastStart",
+		"/E/github/Raspisanie/newapp/FastStart/www",
+		"/E/github/Raspisanie/newapp/FastStart/www/js",
+		"/E/github/Raspisanie/newapp/FastStart/www/templates"
+	],
+	"file_history":
+	[
+		"/E/github/Raspisanie/newapp/FastStart/www/index.html",
+		"/E/github/Raspisanie/newapp/FastStart/www/js/app.js",
+		"/C/Users/reyzo_000/AppData/Roaming/Sublime Text 3/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
+		"/C/Users/reyzo_000/AppData/Roaming/Sublime Text 3/Packages/User/IonRunAndroid.sublime-build",
+		"/C/Users/reyzo_000/AppData/Roaming/Sublime Text 3/Packages/User/IonServe.sublime-build",
+		"/C/OpenServer/domains/g2e/index.php",
+		"/C/OpenServer/domains/g2e/readme.md",
+		"/C/Users/reyzo_000/Desktop/source/src/com/eolwral/osmonitor/core/processInfo.java",
+		"/C/Users/reyzo_000/Desktop/Intercepter-NG.v0910/Res/HTTP/192.168.1.3/livetile.xml_language=ru-RU_region=RU",
+		"/E/github/Cryp2Chat v2/Cryp2ChatClientApp/ionic.project",
+		"/E/github/Cryp2Chat v2/Cryp2ChatClientApp/gulpfile.js",
+		"/E/github/Cryp2Chat v2/Cryp2ChatClientApp/config.xml",
+		"/E/github/Cryp2Chat v2/Cryp2ChatClientApp/demo/views/contacts.html",
+		"/E/github/Cryp2Chat v2/Cryp2ChatClientApp/demo/views/news.html",
+		"/E/github/Raspisanie/cordova/www/js/app.js",
+		"/E/github/Cryp2Chat v2/Cryp2ChatClientApp/demo/views/home.html",
+		"/D/903р/518.plt",
+		"/D/903р/518.kml",
+		"/D/903р/518_track.kml",
+		"/C/Users/reyzo_000/Desktop/public/rhapsody.hpp",
+		"/C/Users/reyzo_000/Desktop/public/rhapsody.cpp",
+		"/E/games/WOT/WoTLauncher.exe",
+		"/C/Users/reyzo_000/Desktop/RLE.cs",
+		"/C/Users/reyzo_000/Desktop/BootstrapFormHelpers-master/README.md",
+		"/E/github/VanyArchiver/Archiver/Archiver/bin/Debug/te.txt.arc",
+		"/C/Users/reyzo_000/Desktop/index.html",
+		"/E/github/VanyArchiver/Archiver/Archiver/bin/Debug/te.jpg.arc",
+		"/C/Users/reyzo_000/Desktop/LZWSharp/LZWSharp/LZWLib/ExtensionMethod.cs"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"isangl",
+			"DayOfWeek"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "E:\\github\\Raspisanie\\newapp\\FastStart"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "www/js/controllers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3709,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2152,
+								2152
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 715.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/github/Raspisanie/cordova/www/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3579,
+								4037
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2322.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/templates/set.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 931,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7,
+								0
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/IonServe.sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
