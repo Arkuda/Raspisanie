@@ -36,41 +36,31 @@ angular.module('starter.controllers', [])
     }
     $scope.typeWeek = typeWeek;
 
-    var  raspisane;
-    if(checkIsOnline($http)){
-
+    var  raspisane = "";
       $http.get(url_raspisanie + localStorage.getItem("currentGroup") + ".json")
       .success(function(data) {
-
+        console.log(localStorage.getItem("currentGroup"));
+        console.log(data);
         localStorage.setItem("raspisanie",data);
         if (positiveWeek()){
-          raspisane = data.chet[0];
+          $scope.raps = data.chet[0];
         }
         else{
-          raspisane= data.necet[0];
+          $scope.raps= data.necet[0];
         }
 
       }).error(function(data) {
         alert("Сначала выберите группу... если выбрали группу и все равно не работает - обратитесь к администратору.");
         if (positiveWeek()){
-          $scope.raps = localStorage.getItem("raspisanie").chet;
+          $scope.raps = localStorage.getItem("raspisanie").chet[0];
         }
         else{
-          $scope.raps = localStorage.getItem("raspisanie").necet;
+          $scope.raps = localStorage.getItem("raspisanie").necet[0];
         }
 
       });
-    }
-    else
-    {
-        var data = localStorage.getItem("raspisanie");
-        if (positiveWeek()){
-          raspisane = data.chet[0];
-        }else{
-          raspisane= data.necet[0];
-        }
-    }
-    $scope.raps = raspisane;
+
+    //$scope.raps = raspisane;
     //$scope.$apply();
   })
   .controller('setCtrl', function($scope,$http ,$stateParams, $timeout) {
@@ -79,12 +69,18 @@ angular.module('starter.controllers', [])
       .success(function(data) {
 
         var groups = [];
+        var groups_trans = [];
         console.log(data);
         localStorage.setItem("groups-json",data);
        // var _group = JSON.parse(data);
         for(var i = 0; i <= data.size - 1; i++)
         {
-          groups.push( data.groups.split(',')[i]);
+          var obj = [
+            data.groups.split(',')[i],
+            data.groups_trans.split(',')[i]
+            ];
+          groups.push(obj);
+
         }
         $scope.groups = groups;
       }).error(function(data) {
@@ -96,15 +92,20 @@ angular.module('starter.controllers', [])
 
 
 
-function checkIsOnline($http)
+function checkIsOnline($http, callback)
 {
-    $http.get("http://raw.githubusercontent.com/Arkuda/Raspisanie/master/avalible.json").
+  var result = false;
+    $http.get("http://raw.githubusercontent.com/Arkuda/Raspisanie/master/avalible.json")
     .success(function(data) {
-        return true;
-    }).error(function(data) {
-        return false;
-    });
+        console.log("isOnline");
+        result = true;
 
+    }).error(function(data) {
+        console.log("isOffline");
+        result = false;
+    });
+    return result;
+    callback(result);
 }
 
 
