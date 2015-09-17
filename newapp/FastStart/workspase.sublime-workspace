@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"function"
+			],
+			[
+				"gr",
+				"group	(set.html)"
+			],
+			[
+				"gro",
+				"groups_trans"
+			],
+			[
 				"check",
 				"checkIsOnline"
 			],
@@ -19,23 +31,23 @@
 			"file": "www/js/controllers.js",
 			"settings":
 			{
-				"buffer_size": 3709,
+				"buffer_size": 3997,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/E/github/Raspisanie/cordova/www/js/app.js",
-			"settings":
-			{
-				"buffer_size": 5799,
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "www/templates/set.html",
 			"settings":
 			{
-				"buffer_size": 931,
+				"buffer_size": 882,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/app.js",
+			"settings":
+			{
+				"buffer_size": 2445,
 				"line_ending": "Unix"
 			}
 		}
@@ -48,7 +60,7 @@
 	"command_palette":
 	{
 		"height": 104.0,
-		"last_filter": "install",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -64,7 +76,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 416.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -92,6 +104,9 @@
 	],
 	"file_history":
 	[
+		"/E/github/Raspisanie/newapp/FastStart/config.xml",
+		"/E/github/Raspisanie/cordova/www/js/app.js",
+		"/C/Users/reyzo_000/Desktop/ist41.json",
 		"/E/github/Raspisanie/newapp/FastStart/www/index.html",
 		"/E/github/Raspisanie/newapp/FastStart/www/js/app.js",
 		"/C/Users/reyzo_000/AppData/Roaming/Sublime Text 3/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
@@ -106,7 +121,6 @@
 		"/E/github/Cryp2Chat v2/Cryp2ChatClientApp/config.xml",
 		"/E/github/Cryp2Chat v2/Cryp2ChatClientApp/demo/views/contacts.html",
 		"/E/github/Cryp2Chat v2/Cryp2ChatClientApp/demo/views/news.html",
-		"/E/github/Raspisanie/cordova/www/js/app.js",
 		"/E/github/Cryp2Chat v2/Cryp2ChatClientApp/demo/views/home.html",
 		"/D/903р/518.plt",
 		"/D/903р/518.kml",
@@ -123,7 +137,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -137,6 +151,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"SUC",
+			"[];\n",
 			"isangl",
 			"DayOfWeek"
 		],
@@ -162,7 +178,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -171,15 +187,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3709,
+						"buffer_size": 3997,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2152,
-								2152
+								3321,
+								3321
 							]
 						],
 						"settings":
@@ -192,57 +208,27 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 715.0,
+						"translation.y": 1589.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/E/github/Raspisanie/cordova/www/js/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5799,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3579,
-								4037
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2322.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "www/templates/set.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 931,
+						"buffer_size": 882,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7,
-								0
+								12,
+								12
 							]
 						],
 						"settings":
@@ -258,7 +244,40 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1774,
+								1774
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 972.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -297,7 +316,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 118.0
+		"height": 28.0
 	},
 	"output.find_results":
 	{

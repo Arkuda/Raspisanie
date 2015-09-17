@@ -81,7 +81,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 
 
-
+//$ionicMaterialConfigProvider.enableForAllPlatforms();
 
 
 
