@@ -69,7 +69,6 @@ angular.module('starter.controllers', [])
       .success(function(data) {
 
         var groups = [];
-        var groups_trans = [];
         console.log(data);
         localStorage.setItem("groups-json",data);
        // var _group = JSON.parse(data);
@@ -80,7 +79,6 @@ angular.module('starter.controllers', [])
             data.groups_trans.split(',')[i]
             ];
           groups.push(obj);
-
         }
         $scope.groups = groups;
       }).error(function(data) {
@@ -92,28 +90,12 @@ angular.module('starter.controllers', [])
 
 
 
-function checkIsOnline($http, callback)
-{
-  var result = false;
-    $http.get("http://raw.githubusercontent.com/Arkuda/Raspisanie/master/avalible.json")
-    .success(function(data) {
-        console.log("isOnline");
-        result = true;
 
-    }).error(function(data) {
-        console.log("isOffline");
-        result = false;
-    });
-    return result;
-    callback(result);
-}
-
-
-var groups = [];
+//var groups = [];
 
 ///urls
 //var url_grups = "http://dl.dropboxusercontent.com/u/61847240/raspisanie/avalible.json";
-var url_grups = "https://raw.githubusercontent.com/Arkuda/Raspisanie/master/avalible.json";
+var url_grups = "http://raw.githubusercontent.com/Arkuda/Raspisanie/master/avalible.json";
 var url_raspisanie = "https://raw.githubusercontent.com/Arkuda/Raspisanie/master/";
 
 
