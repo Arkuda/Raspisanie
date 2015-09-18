@@ -74,6 +74,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   if(localStorage.getItem("firstrun") == true || localStorage.getItem("firstrun") == undefined ){
     $urlRouterProvider.otherwise('/app/set');
     localStorage.setItem("numberofstart","1");
+
   } else if(localStorage.getItem("numberofstart") == "111") {
     $urlRouterProvider.otherwise('/app/rate');
   }else{
