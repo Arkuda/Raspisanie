@@ -60,8 +60,19 @@ angular.module('starter.controllers', [])
 
       });
 
+
+
+
     //$scope.raps = raspisane;
     //$scope.$apply();
+  })
+  .controller('rateCtrl', function($scope,$http, $stateParams, $timeout) {
+    $scope.update = function(user) {
+      var myFirebaseRef = new Firebase("https://raspgut.firebaseio.com/");
+      myFirebaseRef.push().set(user);
+      alert("Спасибо за ваш отзыв !");
+    }
+
   })
   .controller('setCtrl', function($scope,$http ,$stateParams, $timeout) {
     //scope.test = $stateParams.dayID;

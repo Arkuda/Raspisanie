@@ -6,7 +6,10 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-   
+    localStorage.setItem("numberofstart", localStorage.getItem("numberofstart") + 1);
+
+
+
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
@@ -30,6 +33,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         'menuContent': {
           templateUrl: 'templates/set.html',
           controller: 'setCtrl'
+        }
+      }
+    })
+    .state('app.rate', {
+      url: '/rate',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/rate.html',
+          controller: 'rateCtrl'
         }
       }
     })
@@ -61,7 +73,10 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   // if none of the above states are matched, use this as the fallback
   if(localStorage.getItem("firstrun") == true || localStorage.getItem("firstrun") == undefined ){
     $urlRouterProvider.otherwise('/app/set');
-  } else{
+    localStorage.setItem("numberofstart","1");
+  } else if(localStorage.getItem("numberofstart") == "111") {
+    $urlRouterProvider.otherwise('/app/rate');
+  }else{
     $urlRouterProvider.otherwise('/app/raspisanie/'+ getDayOfWeek());
   }
 });
@@ -113,3 +128,10 @@ function selectDayOfWeek(dayint){
     case 5: return "sub"; break;
   }
 }
+
+/*
+*  var myFirebaseRef = new Firebase("https://raspgut.firebaseio.com/");
+ myFirebaseRef.push().set({
+ author: "alanisawesome",
+ title: localStorage.getItem("numberofstart")
+ });*/
