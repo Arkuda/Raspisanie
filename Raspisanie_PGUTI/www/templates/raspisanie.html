@@ -1,4 +1,13 @@
-<ion-view view-title="{{day}} {{typeWeek}}">
+<ion-view view-title="{{day}} "> <!--{{typeWeek}}-->
+  <ion-nav-buttons side="right">
+
+      <button ng-class="$isPosit ? 'button-positive' : 'button-light'"  class="button button-small" ng-click="$isPosit = true; setRasp(true)">
+        чет
+      </button>
+      <button ng-class="$isPosit ? 'button-light' : 'button-positive'" class="button button-small" ng-click="$isPosit = false; setRasp(false)">
+        не чет
+      </button>
+  </ion-nav-buttons>
   <ion-content>
 
     <div ng-if="day == 'Понедельник'">

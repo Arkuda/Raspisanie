@@ -17,6 +17,8 @@ angular.module('starter.controllers', [])
 
 }).controller('raspisCtrl', function($scope,$http, $stateParams, $timeout) {
     //scope.test = $stateParams.dayID;
+    $scope.isPosit = positiveWeek();
+
     var namesWeek = ["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","ВЫХОДНОЙ НАХ"];
     switch ($stateParams.dayID) {
       case "pn":  $scope.day = namesWeek[0]; break;
@@ -35,30 +37,34 @@ angular.module('starter.controllers', [])
       typeWeek = "Нечетная";
     }
     $scope.typeWeek = typeWeek;
+    $scope.setRasp = function(isPosit) {
+      $scope.isPosit = isPosit;
+      var  raspisane = "";
+        $http.get(url_raspisanie + localStorage.getItem("currentGroup") + ".json")
+        .success(function(data) {
+          console.log(localStorage.getItem("currentGroup"));
+          console.log(data);
+          localStorage.setItem("raspisanie",data);
+          if ($scope.isPosit){
+            $scope.raps = data.chet[0];
+          }
+          else{
+            $scope.raps= data.necet[0];
+          }
 
-    var  raspisane = "";
-      $http.get(url_raspisanie + localStorage.getItem("currentGroup") + ".json")
-      .success(function(data) {
-        console.log(localStorage.getItem("currentGroup"));
-        console.log(data);
-        localStorage.setItem("raspisanie",data);
-        if (positiveWeek()){
-          $scope.raps = data.chet[0];
-        }
-        else{
-          $scope.raps= data.necet[0];
-        }
+        }).error(function(data) {
+          alert("Сначала выберите группу... если выбрали группу и все равно не работает - обратитесь к администратору.");
+          if ($scope.isPosit){
+            $scope.raps = localStorage.getItem("raspisanie").chet[0];
+          }
+          else{
+            $scope.raps = localStorage.getItem("raspisanie").necet[0];
+          }
 
-      }).error(function(data) {
-        alert("Сначала выберите группу... если выбрали группу и все равно не работает - обратитесь к администратору.");
-        if (positiveWeek()){
-          $scope.raps = localStorage.getItem("raspisanie").chet[0];
-        }
-        else{
-          $scope.raps = localStorage.getItem("raspisanie").necet[0];
-        }
+        });
+    }
+    $scope.setRasp();
 
-      });
 
 
 
@@ -68,7 +74,7 @@ angular.module('starter.controllers', [])
   })
   .controller('rateCtrl', function($scope,$http, $stateParams, $timeout) {
     $scope.update = function(user) {
-      var myFirebaseRef = new Firebase("https://raspgut.firebaseio.com/");
+      var myFirebaseRef = new Firebase("https://psutischedule.firebaseio.com/rate/");
       myFirebaseRef.push().set(user);
       alert("Спасибо за ваш отзыв !");
     }
